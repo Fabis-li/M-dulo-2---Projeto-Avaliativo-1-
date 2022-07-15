@@ -4,8 +4,6 @@ namespace DevCar.Models
     public class MotoTriciculoModel : VeiculoModel
     
     {
-        
-
         public int PotenciaMotor { get; set; }
         public int QtdeRodas { get; set; }
         
@@ -17,6 +15,20 @@ namespace DevCar.Models
         {
             this.PotenciaMotor = potenciaMotor;
             this.QtdeRodas = qtdeRodas;
+        }
+
+         public void VendaVeiculo()
+        {
+
+        }
+
+        public string ListarInformacoes()
+        {
+            return"";
+        }
+
+        public void AlterarInformacoes()
+        {
         }
 
         //Todo:

@@ -20,6 +20,20 @@ namespace DevCar.Models
             this.potenciaMotor = potenciaMotor;
         }
 
+         public void VendaVeiculo()
+        {
+
+        }
+
+        public string ListarInformacoes()
+        {
+            return"";
+        }
+
+        public void AlterarInformacoes()
+        {
+        }
+
         //Todo:
         // criar enumetor para cor
     }

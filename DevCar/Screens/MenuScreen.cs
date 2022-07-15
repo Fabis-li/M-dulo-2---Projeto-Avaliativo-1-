@@ -1,3 +1,6 @@
+using DevCar.Screen;
+using DevCar.Repositories;
+
 namespace DevCar
 {
     public static class MenuScreen
@@ -12,11 +15,12 @@ namespace DevCar
 
             switch (option)
             {
-                case 1: break;
+                case 1: CadastrarVeiculoScreen.Iniciar();break;
                 case 2: break;
                 case 3: break;
                 case 4: break;
                 case 5: break;
+                case 0:
                 {
                     Console.Clear();
                     Environment.Exit(0);
@@ -40,7 +44,7 @@ namespace DevCar
 
         static void ExibirOpcoes()
         {
-            Console.WriteLine("");
+            Console.WriteLine("1 - Cadastro de veiculos");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
