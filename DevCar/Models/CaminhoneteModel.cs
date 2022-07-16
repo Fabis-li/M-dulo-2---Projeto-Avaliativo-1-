@@ -2,27 +2,29 @@ namespace DevCar.Models
 {
     public class CaminhoneteModel : VeiculoModel
     {
-        public int totalPortas { get; set; }
+        public int TotalPortas { get; set; }
 
-        public string tipoCombustivel { get; set; }
-        public int capacidadeDeCarregamento { get; set; }
-        public int potenciaMotor { get; set; }
+        public string TipoCombustivel { get; set; }
+        public int CapacidadeDeCarregamento { get; set; }
+        public int PotenciaMotor { get; set; }
 
         public CaminhoneteModel()
         {            
         }
 
-        public CaminhoneteModel(DateTime dataFabricacao, string nomeVeiculo, string placa, double valor, string cor, int totalPortas, string tipoCombustivel, int capacidadeDeCarregamento, int potenciaMotor) : base (dataFabricacao, nomeVeiculo, placa, valor, cor)
+        public CaminhoneteModel(DateTime dataFabricacao, string nomeVeiculo, string placa, decimal valor, string cor, int totalPortas, string tipoCombustivel, int capacidadeDeCarregamento, int potenciaMotor) : base (dataFabricacao, nomeVeiculo, placa, valor, cor)
         {
-            this.totalPortas = totalPortas;
-            this.tipoCombustivel = tipoCombustivel;
-            this.capacidadeDeCarregamento = capacidadeDeCarregamento;
-            this.potenciaMotor = potenciaMotor;
+            TotalPortas = totalPortas;
+            TipoCombustivel = tipoCombustivel;
+            CapacidadeDeCarregamento = capacidadeDeCarregamento;
+            PotenciaMotor = potenciaMotor;
         }
 
-         public void VendaVeiculo()
+         public override void VendaVeiculo(string cpfComprador, decimal valorVenda)
         {
-
+            DataVenda = DateTime.Now;
+            CpfComprador = cpfComprador;
+            ValorVenda = valorVenda;
         }
 
         public string ListarInformacoes()

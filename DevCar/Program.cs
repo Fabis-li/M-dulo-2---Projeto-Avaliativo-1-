@@ -8,8 +8,8 @@
     {
         static void Main(string[] args)
         {
-            
-            MenuScreen.Iniciar();
+            VeiculosRepository repository = new VeiculosRepository();
+            MenuScreen.Iniciar(repository);
         }
 
        

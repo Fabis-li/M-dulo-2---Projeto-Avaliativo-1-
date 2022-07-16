@@ -11,14 +11,17 @@ namespace DevCar.Models
         {        
         }
 
-        public MotoTriciculoModel(DateTime dataFabricacao, string nomeVeiculo, string placa, double valor, string cor, int potenciaMotor, int qtdeRodas) : base (dataFabricacao, nomeVeiculo, placa, valor, cor)
+        public MotoTriciculoModel(DateTime dataFabricacao, string nomeVeiculo, string placa, decimal valor, string cor, int potenciaMotor, int qtdeRodas) : base (dataFabricacao, nomeVeiculo, placa, valor, cor)
         {
-            this.PotenciaMotor = potenciaMotor;
-            this.QtdeRodas = qtdeRodas;
+            PotenciaMotor = potenciaMotor;
+            QtdeRodas = qtdeRodas;
         }
 
-         public void VendaVeiculo()
+         public override void VendaVeiculo(string cpfComprador, decimal valorVenda)
         {
+            DataVenda = DateTime.Now;
+            CpfComprador = cpfComprador;
+            ValorVenda = valorVenda;
 
         }
 

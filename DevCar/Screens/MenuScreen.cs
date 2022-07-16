@@ -5,7 +5,7 @@ namespace DevCar
 {
     public static class MenuScreen
     {
-        public static void Iniciar()
+        public static void Iniciar(VeiculosRepository repository)
         {
             Console.Clear();
             TituloDaTela();
@@ -15,8 +15,8 @@ namespace DevCar
 
             switch (option)
             {
-                case 1: CadastrarVeiculoScreen.Iniciar();break;
-                case 2: break;
+                case 1: CadastrarVeiculoScreen.Iniciar(repository);break;
+                case 2: ListaVeiculosScreen.Iniciar(repository);break;
                 case 3: break;
                 case 4: break;
                 case 5: break;
@@ -45,11 +45,11 @@ namespace DevCar
         static void ExibirOpcoes()
         {
             Console.WriteLine("1 - Cadastro de veiculos");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("2 - Listar Veiculos");
+            Console.WriteLine("3 - Carros Disponiveis");
+            Console.WriteLine("4 - Carros Vendidos");
+            Console.WriteLine("5 - Histórico de Transferencia");
+            Console.WriteLine("0 - Sair");
             Console.WriteLine();
             Console.WriteLine("Digite a opcao: ");
         }

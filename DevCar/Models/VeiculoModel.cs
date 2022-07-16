@@ -7,40 +7,38 @@ namespace DevCar.Models
         public DateTime DataFabricacao { get; set; }
         public string NomeVeiculo { get; set; }
         public string Placa { get; set; }
-        public double Valor { get; set; }
-        public int? CpfComprador { get; set; }
+        public decimal Valor { get; set; }
+        public string? CpfComprador { get; set; }
         public string Cor { get; set; }
+        public decimal ValorVenda { get; set; }
+        public DateTime DataVenda { get; set; }
 
         public VeiculoModel()
         {            
         }
 
-        public VeiculoModel(DateTime dataFabricacao, string nomeVeiculo, string placa, double valor, string cor)
+        public VeiculoModel(DateTime dataFabricacao, string nomeVeiculo, string placa, decimal valor, string cor)
         {
-            this.NumeroChassi = Guid.NewGuid().ToString().Substring(0, 18);
-            this.DataFabricacao = dataFabricacao;
-            this.NomeVeiculo = nomeVeiculo;
-            this.Placa = placa;
-            this.Valor = valor;
-            this.CpfComprador = CpfComprador;
-            this.Cor = cor;
+            NumeroChassi = Guid.NewGuid().ToString().Substring(0, 18);         
+            DataFabricacao = dataFabricacao;
+            NomeVeiculo = nomeVeiculo;
+            Placa = placa;
+            Valor = valor;
+            Cor = cor;
             
         }
 
-        public void VendaVeiculo()
+        public virtual void VendaVeiculo(string cpfComprador, decimal valorVenda)
         {
-
+           DataVenda = DateTime.Now;
+           CpfComprador = cpfComprador;
+           ValorVenda = valorVenda;
         }
 
         public virtual string ListarInformacoes()
         {
             return "";
-            // Console.WriteLine(numeroChassi);
-            // Console.WriteLine(dataFabricacao);
-            // Console.WriteLine(nomeVeiculo);
-            // Console.WriteLine(placa);
-            // Console.WriteLine(valor);
-            // Console.WriteLine(cor);
+           
         }
 
         public void AlterarInformacoes()

@@ -12,22 +12,27 @@ namespace DevCar.Models
         {            
         }
 
-        public CarroModel(DateTime dataFabricacao, string nomeVeiculo, string placa, double valor, string cor, int totalDePortas, string tipoCombustivel, int potenciaMotor) : base(dataFabricacao, nomeVeiculo, placa, valor, cor)
+        public CarroModel(DateTime dataFabricacao, string nomeVeiculo, string placa, decimal valor, string cor, int totalDePortas, string tipoCombustivel, int potenciaMotor) : base(dataFabricacao, nomeVeiculo, placa, valor, cor)
         {
             
             TotalDePortas = totalDePortas;
             TipoCombustivel = tipoCombustivel;
             PotenciaMotor = potenciaMotor;
+            
         }
 
-         public void VendaVeiculo()
+        public void VendaVeiculo(string cpfComprador, decimal valorVenda)
         {
+            DataVenda = DateTime.Now;
+            CpfComprador = cpfComprador;
+            ValorVenda = valorVenda;
+            
 
         }
 
-        public string ListarInformacoes()
+        public void ListarInformacoes()
         {
-            return"";
+            
         }
 
         public void AlterarInformacoes()

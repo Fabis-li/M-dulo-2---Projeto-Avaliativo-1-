@@ -1,21 +1,17 @@
 using DevCar.Models;
 namespace DevCar.Repositories
 {
-    public static class VeiculosRepository
+    public class VeiculosRepository
     {
-        public static IList <VeiculoModel> ListaDeVeiculos;
+        public IList <VeiculoModel> ListaDeVeiculos;        
 
-        static VeiculosRepository()
+        public VeiculosRepository()
         {
             ListaDeVeiculos = new List<VeiculoModel>();
-        }
-        
-        // public VeiculosRepository()
-        // {
-        //     ListaDeVeiculos = new List <VeiculoModel>();
-        // }
+        }       
 
-        public static void Listar()
+
+        public void Listar()
         {
             foreach (var listaDeVeiculos in ListaDeVeiculos)
             {
