@@ -17,25 +17,24 @@ namespace DevCar.Models
             QtdeRodas = qtdeRodas;
         }
 
-         public override void VendaVeiculo(string cpfComprador, decimal valorVenda)
+         public  void VendaVeiculo(string cpfComprador)
         {
-            DataVenda = DateTime.Now;
+            
             CpfComprador = cpfComprador;
-            ValorVenda = valorVenda;
+            
 
         }
 
-        public string ListarInformacoes()
+        public override string ListarInformacoes()
         {
-            return"";
+            return $"{base.ListarInformacoes()} | Potência Motor: {PotenciaMotor} | Qtd Rodas: {QtdeRodas}";
         }
 
         public void AlterarInformacoes()
         {
         }
 
-        //Todo:
-        // criar enumetor para cor
+        
     }
 
     

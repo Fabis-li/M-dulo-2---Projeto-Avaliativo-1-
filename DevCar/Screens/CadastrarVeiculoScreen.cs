@@ -32,12 +32,13 @@ namespace DevCar.Screen
                 default: break;
             }
             Console.ReadKey();
-                
-        }
             
+                
+        }           
 
            static void CarroModel(VeiculosRepository repository)
             {
+                Console.Clear();
                 var carro = new CarroModel();
                 Console.WriteLine();
                 Console.WriteLine("Cadastrar Carro");
@@ -72,11 +73,13 @@ namespace DevCar.Screen
 
             static void MotoTriciculoModel(VeiculosRepository repository)
             {
+                Console.Clear();
                 var moto = new MotoTriciculoModel();
-                Console.WriteLine("Cadastrar Carro");                
-                Console.WriteLine("Nome do Carro: ");
+                Console.WriteLine("Cadastrar Moto|Triciculo");   
+                Console.WriteLine("------------------------");             
+                Console.WriteLine("Nome da Moto|Triciculo: ");
                 moto.NomeVeiculo = Console.ReadLine();
-                Console.WriteLine("Digite a Placa do Carro");
+                Console.WriteLine("Digite a Placa da Moto|Triciculo");
                 moto.Placa = Console.ReadLine();                
                 Console.WriteLine("Ano de Fabricação (dd/MM/aaaa): ");
                 moto.DataFabricacao = DateTime.ParseExact(Console.ReadLine()!, "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("pt-BR"));
@@ -84,7 +87,7 @@ namespace DevCar.Screen
                 moto.QtdeRodas = int.Parse(Console.ReadLine());                
                 Console.WriteLine("Potência do Motor: ");
                 moto.PotenciaMotor = int.Parse(Console.ReadLine());
-                Console.WriteLine("Cor da Moto/Triciculo: ");
+                Console.WriteLine("Cor da Moto|Triciculo: ");
                 moto.Cor = Console.ReadLine();
                 Console.WriteLine("Valor R$: ");
                 moto.Valor = decimal.Parse(Console.ReadLine());
@@ -103,11 +106,12 @@ namespace DevCar.Screen
 
             static void CaminhoneteModel(VeiculosRepository repository)
             {
+                Console.Clear();
                 var caminhonete = new CaminhoneteModel();
-                Console.WriteLine("Cadastrar Carro");                
-                Console.WriteLine("Nome do Carro: ");
+                Console.WriteLine("Cadastrar Caminhonete");                
+                Console.WriteLine("Nome do Caminhonete: ");
                 caminhonete.NomeVeiculo = Console.ReadLine();
-                Console.WriteLine("Digite a Placa do Carro");
+                Console.WriteLine("Digite a Placa da Caminhonete");
                 caminhonete.Placa = Console.ReadLine();                
                 Console.WriteLine("Ano de Fabricação (dd/MM/aaaa): ");
                 caminhonete.DataFabricacao = DateTime.ParseExact(Console.ReadLine()!, "dd/MM/yyyy", CultureInfo.CreateSpecificCulture("pt-BR"));
@@ -115,7 +119,7 @@ namespace DevCar.Screen
                 caminhonete.TotalPortas = int.Parse(Console.ReadLine());                
                 Console.WriteLine("Potência do Motor: ");
                 caminhonete.PotenciaMotor = int.Parse(Console.ReadLine());
-                Console.WriteLine("Cor da Moto/Triciculo: ");
+                Console.WriteLine("Cor da Caminhonete: ");
                 caminhonete.Cor = Console.ReadLine();
                 Console.WriteLine("Valor R$: ");
                 caminhonete.Valor = decimal.Parse(Console.ReadLine());

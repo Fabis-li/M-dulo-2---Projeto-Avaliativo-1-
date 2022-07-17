@@ -21,7 +21,7 @@ namespace DevCar.Repositories
                 Console.WriteLine("Cor: " + listaDeVeiculos.Cor);
                 Console.WriteLine("Placa: " + listaDeVeiculos.Placa);
                 Console.WriteLine("Valor: " + listaDeVeiculos.Valor);
-                Console.WriteLine("CPF Comprador: " + listaDeVeiculos.CpfComprador);               
+                Console.WriteLine("CPF Comprador: " + listaDeVeiculos.CpfComprador);                         
 
             }
         }

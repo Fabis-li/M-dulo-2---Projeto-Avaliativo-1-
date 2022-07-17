@@ -20,16 +20,14 @@ namespace DevCar.Models
             PotenciaMotor = potenciaMotor;
         }
 
-         public override void VendaVeiculo(string cpfComprador, decimal valorVenda)
-        {
-            DataVenda = DateTime.Now;
-            CpfComprador = cpfComprador;
-            ValorVenda = valorVenda;
+         public void VendaVeiculo(string cpfComprador)
+        {            
+            CpfComprador = cpfComprador;            
         }
 
-        public string ListarInformacoes()
+        public override string ListarInformacoes()
         {
-            return"";
+            return $"{base.ListarInformacoes()} | Total Portas: {TotalPortas} | Tipo Combustível: {TipoCombustivel} | Capacidade Caçamba: {CapacidadeDeCarregamento} | Potência Motor: {PotenciaMotor}";
         }
 
         public void AlterarInformacoes()

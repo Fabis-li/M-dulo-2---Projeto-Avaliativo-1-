@@ -21,18 +21,18 @@ namespace DevCar.Models
             
         }
 
-        public void VendaVeiculo(string cpfComprador, decimal valorVenda)
+        public void VendaVeiculo(string cpfComprador)
         {
-            DataVenda = DateTime.Now;
+           
             CpfComprador = cpfComprador;
-            ValorVenda = valorVenda;
+           
             
 
         }
 
-        public void ListarInformacoes()
+        public override string ListarInformacoes()
         {
-            
+            return $"{base.ListarInformacoes()} | Qtd Portas: {TotalDePortas} | Tipo Combustível: {TipoCombustivel} | Potência: {PotenciaMotor}";  
         }
 
         public void AlterarInformacoes()
@@ -40,14 +40,6 @@ namespace DevCar.Models
         }
 
         
-        //Todo:
-        // public enum Cor
-        // {
-        //     Branco = 1,
-        //     Prata = 2,
-        //     Preto = 3,
-        //     Vermelho = 4,
-        //     Azul = 5,
-        // }
+       
     }
 }

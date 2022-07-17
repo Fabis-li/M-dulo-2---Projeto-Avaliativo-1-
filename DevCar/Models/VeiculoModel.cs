@@ -10,8 +10,7 @@ namespace DevCar.Models
         public decimal Valor { get; set; }
         public string? CpfComprador { get; set; }
         public string Cor { get; set; }
-        public decimal ValorVenda { get; set; }
-        public DateTime DataVenda { get; set; }
+        
 
         public VeiculoModel()
         {            
@@ -28,21 +27,25 @@ namespace DevCar.Models
             
         }
 
-        public virtual void VendaVeiculo(string cpfComprador, decimal valorVenda)
-        {
-           DataVenda = DateTime.Now;
-           CpfComprador = cpfComprador;
-           ValorVenda = valorVenda;
+        public virtual void VendaVeiculo()
+        {          
+           
+           
         }
 
         public virtual string ListarInformacoes()
         {
-            return "";
+            return $"Data: {DataFabricacao.ToString("dd/MM/yyyy")} | Nome: {NomeVeiculo} | Placa: {Placa} | Valor: {Valor} | Cor: {Cor}";
            
         }
 
-        public void AlterarInformacoes()
+        public void AlterarInformacoes(DateTime dataFabricacao, string nomeVeiculo, string placa, decimal valor, string cor)
         {
+            DataFabricacao = dataFabricacao;
+            NomeVeiculo = nomeVeiculo;
+            Placa = placa;
+            Valor = valor;
+            Cor = cor;            
         }
             
     }
