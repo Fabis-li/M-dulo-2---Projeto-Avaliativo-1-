@@ -2,6 +2,7 @@ using System.Globalization;
 using DevCar.Models;
 using DevCar.Repositories;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace DevCar.Screen
 {
@@ -33,9 +34,11 @@ namespace DevCar.Screen
 
         static void VendaVeiculo(VeiculosRepository repository)
         {
+            Regex regexNumeros = new Regex("^[0-9]+$");
             Console.Clear();
             Console.WriteLine("Digite a placa do veiculo:");
             string placa = Console.ReadLine().ToUpper();
+            
 
             foreach (var veiculo  in repository.ListaDeVeiculos)
             {
@@ -49,7 +52,20 @@ namespace DevCar.Screen
                     string cpfComprador = Console.ReadLine();
                     Console.WriteLine($"Data Venda: {DateTime.Today.ToString("dd/MM/yyyy")}");
                     Console.WriteLine("Valor Vendido: ");
-                    veiculo.ValorVenda = decimal.Parse(Console.ReadLine());
+                    try
+                    {
+                        if(veiculo.ValorVenda >= 0)
+                        {
+                            veiculo.ValorVenda = decimal.Parse(Console.ReadLine());
+                        }
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                        Console.WriteLine($"O erro é: {ex.Message}");
+                    }
+                    
                     Console.WriteLine("Pressione ENTER para voltar ao Menu Principal");
                         
                     var voltar = Console.ReadKey();
