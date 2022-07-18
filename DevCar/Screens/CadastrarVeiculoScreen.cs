@@ -4,8 +4,6 @@ using DevCar.Repositories;
 
 namespace DevCar.Screen
 {
-    
-
     public static class CadastrarVeiculoScreen
     {    
         public static void Iniciar(VeiculosRepository repository)

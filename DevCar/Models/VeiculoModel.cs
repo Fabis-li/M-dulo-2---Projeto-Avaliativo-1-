@@ -10,6 +10,8 @@ namespace DevCar.Models
         public decimal Valor { get; set; }
         public string? CpfComprador { get; set; }
         public string Cor { get; set; }
+        public DateTime DataVenda { get; set; }
+        public decimal ValorVenda { get; set; }
         
 
         public VeiculoModel()
@@ -27,9 +29,11 @@ namespace DevCar.Models
             
         }
 
-        public virtual void VendaVeiculo()
+        public virtual void VendaVeiculo(DateTime dataVenda, decimal valorVenda, string cpfComprador)
         {          
-           
+           CpfComprador = cpfComprador;
+           DataVenda = DateTime.Today;
+           ValorVenda = valorVenda;
            
         }
 

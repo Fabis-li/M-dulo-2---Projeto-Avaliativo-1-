@@ -17,11 +17,9 @@ namespace DevCar.Models
             QtdeRodas = qtdeRodas;
         }
 
-         public  void VendaVeiculo(string cpfComprador)
-        {
-            
-            CpfComprador = cpfComprador;
-            
+         public void VendaVeiculo(string cpfComprador)
+        {            
+            CpfComprador = cpfComprador;            
 
         }
 

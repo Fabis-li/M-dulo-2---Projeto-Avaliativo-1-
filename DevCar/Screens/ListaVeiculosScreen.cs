@@ -150,7 +150,7 @@ namespace DevCar.Screen
                 }
                 else
                 {
-                    foreach ( VeiculoModel veiculos in repository.ListaDeVeiculos)
+                    foreach (VeiculoModel veiculos in repository.ListaDeVeiculos)
                     {
                         Console.WriteLine(veiculos.ListarInformacoes());
 

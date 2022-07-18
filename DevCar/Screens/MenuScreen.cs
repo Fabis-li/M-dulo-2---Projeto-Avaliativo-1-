@@ -19,7 +19,7 @@ namespace DevCar
                 case 2: ListaVeiculosScreen.Iniciar(repository);break;
                 case 3: break;
                 case 4: break;
-                case 5: break;
+                case 5: HistoricoTransferenciaScreen.Iniciar(repository);break;
                 case 0:
                 {
                     Console.Clear();
@@ -46,8 +46,8 @@ namespace DevCar
         {
             Console.WriteLine("1 - Cadastro de veiculos");
             Console.WriteLine("2 - Listar Veiculos");
-            Console.WriteLine("3 - Carros Disponiveis");
-            Console.WriteLine("4 - Carros Vendidos");
+            Console.WriteLine("3 - ");
+            Console.WriteLine("4 - ");
             Console.WriteLine("5 - Histórico de Transferencia");
             Console.WriteLine("0 - Sair");
             Console.WriteLine();
